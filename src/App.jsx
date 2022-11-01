@@ -1,7 +1,11 @@
 import React from 'react';
 import './css/style.css';
+import { useTranslation } from 'react-i18next';
+import { Dropdown, Flag } from 'semantic-ui-react';
 
 function App() {
+  const { t, i18n } = useTranslation();
+
   return (
     <div className="App">
       {/* <div className="fh5co-loader"></div> */}
@@ -62,6 +66,27 @@ function App() {
                     <a href="contact.html">Contact</a>
                   </li>
                 </ul>
+
+                <Dropdown text="File">
+                  <Dropdown.Menu>
+                    <Dropdown.Item
+                      onClick={() => i18n.changeLanguage('vn')}
+                      text={
+                        <span>
+                          <Flag name="vn" /> vn
+                        </span>
+                      }
+                    />
+                    <Dropdown.Item
+                      onClick={() => i18n.changeLanguage('en')}
+                      text={
+                        <span>
+                          <Flag name="us" /> en
+                        </span>
+                      }
+                    />
+                  </Dropdown.Menu>
+                </Dropdown>
               </div>
             </div>
           </div>
@@ -71,7 +96,9 @@ function App() {
           id="fh5co-header"
           className="fh5co-cover"
           role="banner"
-          style={{ 'background-image': 'url(images/img_bg_2.jpg)' }}
+          style={{
+            backgroundImage: `url(${require('./images/img_bg_2.jpg')})`
+          }}
           data-stellar-background-ratio={'0.5'}
         >
           <div className="overlay"></div>
@@ -80,7 +107,9 @@ function App() {
               <div className="col-md-8 col-md-offset-2 text-center">
                 <div className="display-t">
                   <div className="display-tc animate-box" data-animate-effect="fadeIn">
-                    <h1>Joefrey &amp; Sheila</h1>
+                    <h1>
+                      {t('jarvis')} &amp; {t('ceci')}
+                    </h1>
                     <h2>We Are Getting Married</h2>
                     <div className="simply-countdown simply-countdown-one"></div>
                     <p>
@@ -107,7 +136,7 @@ function App() {
             <div className="couple-wrap animate-box">
               <div className="couple-half">
                 <div className="groom">
-                  <img src="images/groom.jpg" alt="groom" className="img-responsive" />
+                  <img src={require('./images/groom.jpg')} alt="groom" className="img-responsive" />
                 </div>
                 <div className="desc-groom">
                   <h3>Joefrey Mahusay</h3>
@@ -122,7 +151,7 @@ function App() {
               </p>
               <div className="couple-half">
                 <div className="bride">
-                  <img src="images/bride.jpg" alt="groom" className="img-responsive" />
+                  <img src={require('./images/bride.jpg')} alt="bride" className="img-responsive" />
                 </div>
                 <div className="desc-bride">
                   <h3>Sheila Mahusay</h3>
@@ -136,10 +165,10 @@ function App() {
           </div>
         </div>
 
-        {/* <div
+        <div
           id="fh5co-event"
           className="fh5co-bg"
-          style="background-image:url(images/img_bg_3.jpg);"
+          style={{ backgroundImage: `url(${require('./images/img_bg_3.jpg')})` }}
         >
           <div className="overlay"></div>
           <div className="container">
@@ -200,9 +229,9 @@ function App() {
               </div>
             </div>
           </div>
-				</div> */}
+        </div>
 
-        {/* <div id="fh5co-couple-story">
+        <div id="fh5co-couple-story">
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -220,7 +249,7 @@ function App() {
                   <li className="animate-box">
                     <div
                       className="timeline-badge"
-                      style="background-image:url(images/couple-1.jpg);"
+                      style={{ backgroundImage: `url(${require('./images/couple-1.jpg')})` }}
                     ></div>
                     <div className="timeline-panel">
                       <div className="timeline-heading">
@@ -240,7 +269,7 @@ function App() {
                   <li className="timeline-inverted animate-box">
                     <div
                       className="timeline-badge"
-                      style="background-image:url(images/couple-2.jpg);"
+                      style={{ backgroundImage: `url(${require('./images/couple-2.jpg')})` }}
                     ></div>
                     <div className="timeline-panel">
                       <div className="timeline-heading">
@@ -260,7 +289,7 @@ function App() {
                   <li className="animate-box">
                     <div
                       className="timeline-badge"
-                      style="background-image:url(images/couple-3.jpg);"
+                      style={{ backgroundImage: `url(${require('./images/couple-3.jpg')})` }}
                     ></div>
                     <div className="timeline-panel">
                       <div className="timeline-heading">
@@ -281,9 +310,9 @@ function App() {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div id="fh5co-gallery" className="fh5co-section-gray">
+        <div id="fh5co-gallery" className="fh5co-section-gray">
           <div className="container">
             <div className="row">
               <div className="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -301,7 +330,7 @@ function App() {
                   <li
                     className="one-third animate-box"
                     data-animate-effect="fadeIn"
-                    style="background-image: url(images/gallery-1.jpg);"
+                    style={{ backgroundImage: `url(${require('./images/gallery-1.jpg')})` }}
                   >
                     <a href="images/gallery-1.jpg">
                       <div className="case-studies-summary">
@@ -313,7 +342,7 @@ function App() {
                   <li
                     className="one-third animate-box"
                     data-animate-effect="fadeIn"
-                    style="background-image: url(images/gallery-2.jpg);"
+                    style={{ backgroundImage: `url(${require('./images/gallery-2.jpg')})` }}
                   >
                     <a href="#" className="color-2">
                       <div className="case-studies-summary">
@@ -326,7 +355,7 @@ function App() {
                   <li
                     className="one-third animate-box"
                     data-animate-effect="fadeIn"
-                    style="background-image: url(images/gallery-3.jpg);"
+                    style={{ backgroundImage: `url(${require('./images/gallery-3.jpg')})` }}
                   >
                     <a href="#" className="color-3">
                       <div className="case-studies-summary">
@@ -338,7 +367,7 @@ function App() {
                   <li
                     className="one-third animate-box"
                     data-animate-effect="fadeIn"
-                    style="background-image: url(images/gallery-4.jpg);"
+                    style={{ backgroundImage: `url(${require('./images/gallery-4.jpg')})` }}
                   >
                     <a href="#" className="color-4">
                       <div className="case-studies-summary">
@@ -351,7 +380,7 @@ function App() {
                   <li
                     className="one-third animate-box"
                     data-animate-effect="fadeIn"
-                    style="background-image: url(images/gallery-5.jpg);"
+                    style={{ backgroundImage: `url(${require('./images/gallery-5.jpg')})` }}
                   >
                     <a href="#" className="color-3">
                       <div className="case-studies-summary">
@@ -363,7 +392,7 @@ function App() {
                   <li
                     className="one-third animate-box"
                     data-animate-effect="fadeIn"
-                    style="background-image: url(images/gallery-6.jpg);"
+                    style={{ backgroundImage: `url(${require('./images/gallery-6.jpg')})` }}
                   >
                     <a href="#" className="color-4">
                       <div className="case-studies-summary">
@@ -376,7 +405,7 @@ function App() {
                   <li
                     className="one-third animate-box"
                     data-animate-effect="fadeIn"
-                    style="background-image: url(images/gallery-7.jpg);"
+                    style={{ backgroundImage: `url(${require('./images/gallery-7.jpg')})` }}
                   >
                     <a href="#" className="color-4">
                       <div className="case-studies-summary">
@@ -389,7 +418,7 @@ function App() {
                   <li
                     className="one-third animate-box"
                     data-animate-effect="fadeIn"
-                    style="background-image: url(images/gallery-8.jpg);"
+                    style={{ backgroundImage: `url(${require('./images/gallery-8.jpg')})` }}
                   >
                     <a href="#" className="color-5">
                       <div className="case-studies-summary">
@@ -401,7 +430,7 @@ function App() {
                   <li
                     className="one-third animate-box"
                     data-animate-effect="fadeIn"
-                    style="background-image: url(images/gallery-9.jpg);"
+                    style={{ backgroundImage: `url(${require('./images/gallery-9.jpg')})` }}
                   >
                     <a href="#" className="color-6">
                       <div className="case-studies-summary">
@@ -414,12 +443,12 @@ function App() {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div
+        <div
           id="fh5co-counter"
           className="fh5co-bg fh5co-counter"
-          style="background-image:url(images/img_bg_5.jpg);"
+          style={{ backgroundImage: `url(${require('./images/img_bg_6.jpg')})` }}
         >
           <div className="overlay"></div>
           <div className="container">
@@ -501,7 +530,7 @@ function App() {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
         <div id="fh5co-testimonial">
           <div className="container">
@@ -584,7 +613,7 @@ function App() {
           </div>
         </div>
 
-        {/* <div id="fh5co-services" className="fh5co-section-gray">
+        <div id="fh5co-services" className="fh5co-section-gray">
           <div className="container">
             <div className="row animate-box">
               <div className="col-md-8 col-md-offset-2 text-center fh5co-heading">
@@ -641,7 +670,7 @@ function App() {
               <div className="col-md-6 animate-box">
                 <div
                   className="fh5co-video fh5co-bg"
-                  style="background-image: url(images/img_bg_3.jpg); "
+                  style={{ backgroundImage: `url(${require('./images/img_bg_3.jpg')})` }}
                 >
                   <a href="https://vimeo.com/channels/staffpicks/93951774" className="popup-vimeo">
                     <i className="icon-video2"></i>
@@ -651,12 +680,12 @@ function App() {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div
+        <div
           id="fh5co-started"
           className="fh5co-bg"
-          style="background-image:url(images/img_bg_4.jpg);"
+          style={{ backgroundImage: `url(${require('./images/img_bg_4.jpg')})` }}
         >
           <div className="overlay"></div>
           <div className="container">
@@ -694,7 +723,7 @@ function App() {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
         <footer id="fh5co-footer" role="contentinfo">
           <div className="container">
