@@ -4,5 +4,9 @@
       "plugin:react/recommended", 
       "plugin:prettier/recommended",
       "prettier"
-    ]
+    ],
+    "rules": {
+      "prettier/prettier": 0,
+      "no-unused-vars": 0
+    }
 }

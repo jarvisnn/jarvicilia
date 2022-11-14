@@ -1,0 +1,124 @@
+.header-background {
+  width: 100vw;
+  height: 90vh;
+}
+
+.header-container {
+  overflow: hidden;
+}
+
+.header-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.header-content {
+  background-color: #00000085;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  top: 0;
+}
+
+.header-play {
+  padding-top: 40px;
+}
+
+.header-play img {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  width: 80px;
+  transition-duration: 100ms;
+}
+
+.header-play img:hover {
+  width: 90px;
+}
+
+.video-modal {
+  z-index: 100;
+}
+
+.video-full {
+  padding: 20px 40px;
+  width: 100%;
+  min-height: 800px;
+}
+
+#fh5co-event {
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.event-wrap {
+  /* height: 400px; */
+}
+
+.wedding-plan-container {
+
+}
+
+.wedding-plan {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: center;
+}
+
+.wedding-plan img {
+  width: 56px;
+  -webkit-filter: invert(100%); /* Safari/Chrome */
+  filter: invert(100%);
+}
+
+.wedding-plan-info {
+  color: white;
+  text-align: left;
+  padding-left: 20px;
+  font-size: 16px;
+  min-width: 160px;
+}
+
+.wedding-plan-info .time {
+  font-size: 20px;
+  font-weight: bold;
+  padding-bottom: 4px;
+}
+
+.event_loc {
+  color: white !important;
+  font-weight: bold;
+  font-size: 24px !important;
+  margin-bottom: 0 !important;
+}
+
+.event_time {
+  color: white !important;
+  font-size: 18px !important;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  max-height: 200px;
+  max-width: 50%;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+.select-lan {
+  color: white !important;
+}
+.select-lan-dropdown i {
+  color: white !important;
+}

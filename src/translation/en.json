@@ -1,4 +1,24 @@
 {
   "jarvis": "Jarvis",
-  "ceci": "Cecilia"
+  "ceci": "Cecilia",
+  "intro_hello": "We are getting married!",
+  "intro_location": "Hanoi, December 10th 2022",
+  "intro_groom": "No romance but live with the whole heart.",
+  "intro_bride": "Probably the cutest and most beautiful girl in the world.",
+  "intro_text_0": "We bumped into each other so randomly. So different characters but so many things in common. Probably that's why we stick together.",
+  "intro_text_1": "We have been to places, tried new things, explored the world together. Let's keep doing that, till my last day. Hold my hand tight & write our own stories.",
+  "event_title": "Our Wedding",
+  "event_location": "SoftWater Restaurant",
+  "event_time": "Saturday, 10 December 2022",
+  "wedding_location": "Pin me",
+  "wedding_agenda": "Our wedding day",
+  "wedding_0": "Photos",
+  "wedding_1": "Ceremony",
+  "wedding_2": "Dinner",
+  "wedding_3": "Party hard",
+  "gallery_sub": "Our memories",
+  "gallery_header": "Gallery",
+  "joinus_header": "Are You Attending?",
+  "joinus_text": "Let's join us writing our very first moment",
+  "joinus_btn": "I'm Attending"
 }

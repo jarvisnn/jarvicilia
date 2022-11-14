@@ -1,4 +1,24 @@
 {
-  "jarvis": "Việt Dũng",
-  "ceci": "Hoàng Trang"
+  "jarvis": "Dũng",
+  "ceci": "Trang",
+  "intro_hello": "We are getting married!",
+  "intro_location": "Hanoi, December 10th 2022",
+  "intro_groom": "No romance but live with the whole heart.",
+  "intro_bride": "Probably the cutest and most beautiful girl in the world.",
+  "intro_text_0": "We bumped into each other so randomly. So different characters but so many things in common. Probably that's why we stick together.",
+  "intro_text_1": "We have been to places, tried new things, explored the world together. Let's keep doing that, till my last day. Hold my hand tight & write our own stories.",
+  "event_title": "Our Wedding",
+  "event_location": "Nhà Hàng SoftWater",
+  "event_time": "Thứ 7, ngày 10 tháng 12 năm 2022",
+  "wedding_location": "Bản đồ",
+  "wedding_agenda": "Lịch trình",
+  "wedding_0": "Đón khách, chụp ảnh",
+  "wedding_1": "Làm lễ",
+  "wedding_2": "Dùng tiệc",
+  "wedding_3": "Hát hò, tung hoa",
+  "gallery_sub": "Our memories",
+  "gallery_header": "Gallery",
+  "joinus_header": "Are You Attending?",
+  "joinus_text": "Tham gia với bọn mình nhé",
+  "joinus_btn": "I'm Attending"
 }
