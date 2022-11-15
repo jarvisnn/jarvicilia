@@ -7,10 +7,12 @@ import { Button, Dropdown, Flag, Modal } from 'semantic-ui-react';
 
 function importAll(r) {
   let images = {};
-   r.keys().forEach((item, index) => { images[item.replace('./', '')] = r(item); });
-  return images
- }
- const weddingImages = importAll(require.context('./images/gallery', false, /\.(png|jpe?g|svg)$/));
+  r.keys().forEach((item, index) => {
+    images[item.replace('./', '')] = r(item);
+  });
+  return images;
+}
+const weddingImages = importAll(require.context('./images/gallery', false, /\.(png|jpe?g|svg)$/));
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -35,9 +37,14 @@ function App() {
                 </div>
               </div>
               <div className="col-xs-10 text-right menu-1">
-                <Dropdown className='select-lan-dropdown' text={<div className="select-lan">
-                  <Flag name={i18n.language == "vn" ? "vn" : "us"} /> {i18n.language}
-                </div>}>
+                <Dropdown
+                  className="select-lan-dropdown"
+                  text={
+                    <div className="select-lan">
+                      <Flag name={i18n.language == 'vn' ? 'vn' : 'us'} /> {i18n.language}
+                    </div>
+                  }
+                >
                   <Dropdown.Menu>
                     <Dropdown.Item
                       onClick={() => i18n.changeLanguage('vn')}
@@ -138,7 +145,7 @@ function App() {
                 {/* <p>{t('intro_text')}</p> */}
               </div>
             </div>
-            
+
             <div className="row couple-wrap animate-box">
               <div className="couple-half">
                 <div className="groom">
@@ -165,36 +172,34 @@ function App() {
 
             <div className="row">
               <div className="col-md-12 col-md-offset-0">
-
                 <ul className="timeline animate-box">
-                  {[
-                    require('./images/story-1.jpg'),
-                    require('./images/story-2.jpg'),
-                  ].map((v, idx) => {
-                    return (
-                      <li className={`animate-box ${idx % 2 == 1 ? 'timeline-inverted' : ''}`} key={idx}>
-                        <div
-                          className="timeline-badge"
-                          style={{ backgroundImage: `url(${v})` }}
-                        ></div>
-                        <div className="timeline-panel">
-                          <div className="timeline-heading">
-                            {/* <h3 className="timeline-title">First We Meet</h3> */}
-                            {/* <span className="date">December 25, 2015</span> */}
+                  {[require('./images/story-1.jpg'), require('./images/story-2.jpg')].map(
+                    (v, idx) => {
+                      return (
+                        <li
+                          className={`animate-box ${idx % 2 == 1 ? 'timeline-inverted' : ''}`}
+                          key={idx}
+                        >
+                          <div
+                            className="timeline-badge"
+                            style={{ backgroundImage: `url(${v})` }}
+                          ></div>
+                          <div className="timeline-panel">
+                            <div className="timeline-heading">
+                              {/* <h3 className="timeline-title">First We Meet</h3> */}
+                              {/* <span className="date">December 25, 2015</span> */}
+                            </div>
+                            <div className="timeline-body">
+                              <p>{t(`intro_text_${idx}`)}</p>
+                            </div>
                           </div>
-                          <div className="timeline-body">
-                            <p>
-                              {t(`intro_text_${idx}`)}
-                            </p>
-                          </div>
-                        </div>
-                      </li>
-                    );
-                  })}
+                        </li>
+                      );
+                    }
+                  )}
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
 
@@ -219,31 +224,39 @@ function App() {
                     <div className="col-md-6 col-sm-6 text-center">
                       <div className="event-wrap animate-box">
                         <h3>{t('wedding_location')}</h3>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.5346490690476!2d105.84322055107512!3d21.051297985917476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abb3bc3a75a9%3A0x8d7d3e603a3d6572!2sSoftWater%20Restaurant!5e0!3m2!1sen!2s!4v1668451146102!5m2!1sen!2s" width="100%" height="300px" style={{"border": 0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.5346490690476!2d105.84322055107512!3d21.051297985917476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135abb3bc3a75a9%3A0x8d7d3e603a3d6572!2sSoftWater%20Restaurant!5e0!3m2!1sen!2s!4v1668451146102!5m2!1sen!2s"
+                          width="100%"
+                          height="300px"
+                          style={{ border: 0 }}
+                          allowFullScreen=""
+                          loading="lazy"
+                          referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
                       </div>
                     </div>
                     <div className="col-md-6 col-sm-6 text-center">
                       <div className="event-wrap animate-box">
                         <h3>{t('wedding_agenda')}</h3>
 
-                      <div className="wedding-plan-container">
-                        {[
-                          [require('./images/photo-camera.png'), "16:30"],
-                          [require('./images/wedding-rings.png'), "17:30"],
-                          [require('./images/champagne.png'), "18:00"],
-                          [require('./images/microphone.png'), "19:00"],
-                        ].map(([i, time], idx) => {
-                          return (
-                            <div className="wedding-plan" key={idx}>
-                              <img src={i}/>
-                              <div className="wedding-plan-info">
-                                <div className="time">{time}</div>
-                                <div>{t(`wedding_${idx}`)}</div>
+                        <div className="wedding-plan-container">
+                          {[
+                            [require('./images/photo-camera.png'), '16:30'],
+                            [require('./images/wedding-rings.png'), '17:30'],
+                            [require('./images/champagne.png'), '18:00'],
+                            [require('./images/microphone.png'), '19:00']
+                          ].map(([i, time], idx) => {
+                            return (
+                              <div className="wedding-plan" key={idx}>
+                                <img src={i} />
+                                <div className="wedding-plan-info">
+                                  <div className="time">{time}</div>
+                                  <div>{t(`wedding_${idx}`)}</div>
+                                </div>
                               </div>
-                            </div>
-                          );
-                        })}
-                      </div>
+                            );
+                          })}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -252,7 +265,7 @@ function App() {
             </div>
           </div>
         </div>
-        
+
         <div id="fh5co-gallery">
           <div className="container">
             <div className="row">
@@ -263,11 +276,16 @@ function App() {
             </div>
             <div className="row row-bottom-padded-md">
               <div className="col-md-12 text-center">
-              <Button basic color='teal' size='massive' onClick={() => {
-                window.open("https://forms.gle/p4UTv3cEkHJXC9su6", "_blank");
-              }}>
-                {t('joinus_btn')}
-              </Button>
+                <Button
+                  basic
+                  color="teal"
+                  size="massive"
+                  onClick={() => {
+                    window.open('https://forms.gle/p4UTv3cEkHJXC9su6', '_blank');
+                  }}
+                >
+                  {t('joinus_btn')}
+                </Button>
               </div>
             </div>
           </div>
@@ -284,10 +302,15 @@ function App() {
             <div className="row row-bottom-padded-md">
               <div className="col-md-12">
                 <div className="gallery">
-
                   {Object.values(weddingImages).map((i, idx) => {
                     return (
-                      <img key={idx} src={i}/>
+                      <img
+                        key={idx}
+                        src={i}
+                        onClick={() => {
+                          window.open(i, '_blank');
+                        }}
+                      />
                     );
                   })}
                 </div>
