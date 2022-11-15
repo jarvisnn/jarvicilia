@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.49019090.css",
-    "main.js": "./static/js/main.d12e387b.js",
+    "main.css": "./static/css/main.67477182.css",
+    "main.js": "./static/js/main.7b5fad84.js",
     "static/js/787.013bf5f6.chunk.js": "./static/js/787.013bf5f6.chunk.js",
     "static/media/propose.jpg": "./static/media/propose.0faa88872dfa7a661589.jpg",
     "static/media/story-2.jpg": "./static/media/story-2.140c86e47dcba75e25b6.jpg",
@@ -12,6 +12,7 @@
     "static/media/film cuoi chi trang_1.20.jpg": "./static/media/film cuoi chi trang_1.20.9373b41a5005571cf375.jpg",
     "static/media/film cuoi chi trang_2.1.jpg": "./static/media/film cuoi chi trang_2.1.a13623771663023f0ee9.jpg",
     "static/media/film cuoi chi trang_1.24.jpg": "./static/media/film cuoi chi trang_1.24.437bf5d01cb0610c94e3.jpg",
+    "static/media/bg.jpg": "./static/media/bg.3f304ba79fd032921b87.jpg",
     "static/media/film cuoi chi trang_1.2.jpg": "./static/media/film cuoi chi trang_1.2.3f304ba79fd032921b87.jpg",
     "static/media/film cuoi chi trang_1.40.jpg": "./static/media/film cuoi chi trang_1.40.5f00fca38eb2852838bb.jpg",
     "static/media/film cuoi chi trang_1.33.jpg": "./static/media/film cuoi chi trang_1.33.89822482c4726ec3c918.jpg",
@@ -75,12 +76,12 @@
     "static/media/outline-icons.woff2": "./static/media/outline-icons.687a4990ea22bb1a49d4.woff2",
     "static/media/wedding-rings.png": "./static/media/wedding-rings.15cfb45050d918f758a0.png",
     "index.html": "./index.html",
-    "main.49019090.css.map": "./static/css/main.49019090.css.map",
-    "main.d12e387b.js.map": "./static/js/main.d12e387b.js.map",
+    "main.67477182.css.map": "./static/css/main.67477182.css.map",
+    "main.7b5fad84.js.map": "./static/js/main.7b5fad84.js.map",
     "787.013bf5f6.chunk.js.map": "./static/js/787.013bf5f6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.49019090.css",
-    "static/js/main.d12e387b.js"
+    "static/css/main.67477182.css",
+    "static/js/main.7b5fad84.js"
   ]
 }

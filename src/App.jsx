@@ -19,8 +19,6 @@ function App() {
 
   const [open, setOpen] = React.useState(false);
 
-  console.log(navigator.language);
-
   return (
     <div className="App">
       {/* <div className="fh5co-loader"></div> */}
@@ -30,7 +28,7 @@ function App() {
             <div className="row">
               <div className="col-xs-2">
                 <div id="fh5co-logo">
-                  <a href="index.html">
+                  <a href="/">
                     {t('jarvicilia')}
                     <strong>.</strong>
                   </a>
@@ -47,7 +45,10 @@ function App() {
                 >
                   <Dropdown.Menu>
                     <Dropdown.Item
-                      onClick={() => i18n.changeLanguage('vn')}
+                      onClick={() => {
+                        i18n.changeLanguage('vn');
+                        localStorage.setItem('lan', 'vn');
+                      }}
                       text={
                         <span>
                           <Flag name="vn" /> vn
@@ -55,7 +56,10 @@ function App() {
                       }
                     />
                     <Dropdown.Item
-                      onClick={() => i18n.changeLanguage('en')}
+                      onClick={() => {
+                        i18n.changeLanguage('en');
+                        localStorage.setItem('lan', 'en');
+                      }}
                       text={
                         <span>
                           <Flag name="us" /> en
@@ -75,7 +79,10 @@ function App() {
           role="banner"
           data-stellar-background-ratio={'0.5'}
         >
-          <div className="header-background">
+          <div
+            className="header-background"
+            style={{ backgroundImage: `url(${require('./images/bg.jpg')})` }}
+          >
             <iframe
               className="header-video"
               src="https://www.youtube.com/embed/mrNVZZB9LSI?controls=0&autoplay=1&showinfo=0&mute=1&playsinline=1&loop=1&playlist=mrNVZZB9LSI"

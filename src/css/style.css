@@ -120,12 +120,7 @@ figure {
   padding: 5px 10px;
   color: #fff;
 }
-@media screen and (max-width: 768px) {
-  .fh5co-nav .menu-1,
-  .fh5co-nav .menu-2 {
-    display: none;
-  }
-}
+
 .fh5co-nav ul {
   padding: 0;
   margin: 2px 0 0 0;
