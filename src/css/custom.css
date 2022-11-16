@@ -144,3 +144,34 @@
     padding: 80px 0;
   }
 }
+
+.qr-wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+  margin-bottom: -60px;
+}
+
+.qr-scan {
+  width: 180px;
+  display: inline-block;
+  padding: 20px;
+  margin: 0 20px;
+}
+
+.qr-scan img {
+  width: 100%;
+}
+
+.qr-scan h1 {
+  font-size: 14px;
+}
+
+.qr-scan p {
+  padding-top: 8px;
+  cursor: pointer;
+}
+
+.qr-scan p:hover {
+  color: rgb(255, 119, 65);
+}
