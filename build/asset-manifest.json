@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "./static/css/main.de218019.css",
+    "main.css": "./static/css/main.1a077884.css",
     "main.js": "./static/js/main.bb27829b.js",
     "static/js/787.013bf5f6.chunk.js": "./static/js/787.013bf5f6.chunk.js",
     "static/media/propose.jpg": "./static/media/propose.0faa88872dfa7a661589.jpg",
@@ -78,12 +78,12 @@
     "static/media/outline-icons.woff2": "./static/media/outline-icons.687a4990ea22bb1a49d4.woff2",
     "static/media/wedding-rings.png": "./static/media/wedding-rings.15cfb45050d918f758a0.png",
     "index.html": "./index.html",
-    "main.de218019.css.map": "./static/css/main.de218019.css.map",
+    "main.1a077884.css.map": "./static/css/main.1a077884.css.map",
     "main.bb27829b.js.map": "./static/js/main.bb27829b.js.map",
     "787.013bf5f6.chunk.js.map": "./static/js/787.013bf5f6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.de218019.css",
+    "static/css/main.1a077884.css",
     "static/js/main.bb27829b.js"
   ]
 }
