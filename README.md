@@ -1,5 +1,5 @@
 # Website
-[https://jarvicilia.jarvisn.xyz](https://jarvicilia.jarvisn.xyz)
+[https://jarvisnn.github.io/jarvicilia](https://jarvisnn.github.io/jarvicilia)
 
 
 # Getting Started with Create React App
