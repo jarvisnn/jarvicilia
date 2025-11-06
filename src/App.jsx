@@ -18,7 +18,6 @@ function App() {
   const { t, i18n } = useTranslation();
 
   const [open, setOpen] = React.useState(false);
-  const [copy, setCopy] = React.useState(false);
 
   return (
     <div className="App">
@@ -298,42 +297,6 @@ function App() {
               </div>
             </div>
 
-            <div className="row row-bottom-padded-md">
-              <div className="col-md-12 text-center">
-                <div className="qr-wrapper">
-                  {[
-                    [
-                      'Techcombank',
-                      require('./images/qr-tech.jpg'),
-                      'Nguyen Viet Dung 6296-2020-22',
-                      '6296202022'
-                    ],
-                    [
-                      'Ethereum',
-                      require('./images/qr-eth.png'),
-                      '0xd0127d...1B47',
-                      '0xd0127dB0c234699ecDdd92bdFcc37B5e74e31B47'
-                    ]
-                  ].map(([method, i, text, copyText], idx) => {
-                    return (
-                      <div key={idx} className="qr-scan">
-                        <h1>{method}</h1>
-                        <img src={i} />
-                        <p
-                          onClick={() => {
-                            navigator.clipboard.writeText(copyText);
-                            setCopy(copyText);
-                          }}
-                        >
-                          {text} <i className="icon-clipboard"></i>{' '}
-                          {copy === copyText ? 'copied' : ''}
-                        </p>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            </div>
           </div>
         </div>
 
